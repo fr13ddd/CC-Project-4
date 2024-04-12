@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Divination Enhanced</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Where Should I Travel Next?</h1>
+        <select id="climate">
+            <option value="">Select Your Climate Preference</option>
+            <option value="beach">Beach</option>
+            <option value="mountain">Mountain</option>
+            <option value="city">City</option>
+        </select>
+        <input type="month" id="travelTime" placeholder="Preferred Month of Travel">
+        <input type="number" id="budget" placeholder="Your Budget (in USD)">
+        <button onclick="findDestination()">Find My Destination</button>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
