@@ -44,10 +44,32 @@ function findDestination() {
         resultText = "Based on your preferences, you should consider visiting: <br>";
         suggestions.forEach(s => {
             resultText += `${s.name} (Best months: ${s.bestMonths.join(", ")}, Budget: $${s.budget})<br>`;
+            // 发送请求获取天气信息
+            fetchWeather(s.name);
         });
     } else if (climate) {
         resultText = "No matching destinations found with your criteria.";
     }
 
     document.getElementById("result").innerHTML = resultText;
+}
+
+function fetchWeather(destination) {
+    // 使用你的 API 密钥和目的地信息构建 API 请求
+    const apiKey = "f6b5f60882b0b1b4a3f41741666d4f38";
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${destination}&appid=${apiKey}&units=metric`;
+
+    // 发送 API 请求
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            // 处理返回的天气数据
+            const temperature = data.main.temp;
+            const weatherDescription = data.weather[0].description;
+            
+            // 更新页面上的天气信息
+            const weatherInfo = `${destination}: ${temperature}°C, ${weatherDescription}`;
+            document.getElementById("weather-info").innerHTML += `<p>${weatherInfo}</p>`;
+        })
+        .catch(error => console.error("Error fetching weather data:", error));
 }
