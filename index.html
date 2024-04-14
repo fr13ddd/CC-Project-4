@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Divination Enhanced</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,28 +16,18 @@
             <option value="city">City</option>
         </select>
         <select id="travelTime">
-            <option value="">Select Your Preferred Travel Month</option>
+            <option value="">Select Preferred Month of Travel</option>
             <option value="01">January</option>
             <option value="02">February</option>
             <option value="03">March</option>
-            <option value="04">April</option>
-            <option value="05">May</option>
-            <option value="06">June</option>
-            <option value="07">July</option>
-            <option value="08">August</option>
-            <option value="09">September</option>
-            <option value="10">October</option>
-            <option value="11">November</option>
-            <option value="12">December</option>
+            <!-- Add other months here -->
         </select>
         <select id="budget">
             <option value="">Select Your Budget Range</option>
-            <option value="500">Up to $500</option>
-            <option value="1000">Up to $1,000</option>
-            <option value="2000">Up to $2,000</option>
-            <option value="3000">Up to $3,000</option>
-            <option value="4000">Up to $4,000</option>
-            <option value="5000">Up to $5,000 and above</option>
+            <option value="1000">$1000 or less</option>
+            <option value="2000">$1001 - $2000</option>
+            <option value="3000">$2001 - $3000</option>
+            <!-- Add other budget ranges here -->
         </select>
         <button onclick="findDestination()">Find My Destination</button>
         <div id="result"></div>
