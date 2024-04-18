@@ -20,6 +20,22 @@
   <body>
     <div class="container">
       <h1>Where Should I Travel Next?</h1>
+      <p>
+        This web page is to recommend travel destinations for the user, who can
+        select the conditions according to their preferences, such as type of
+        travel destination, month, and budget.
+        <br /><br />
+        After the user clicks on the button, the page will recommend suitable
+        travel destinations based on the user's choices, matching the user's
+        inputs with the preset destination information. <br /><br />The page
+        also uses Google Maps API to mark the location of the recommended
+        destination on the map. The map is dynamically updated to show the
+        appropriate geographic location based on the recommendations.
+        <br /><br />The last feature is the display of weather information, each
+        recommended destination may also include current weather information.
+        The weather information is obtained by calling OpenWeather's API and
+        displayed on the page.
+      </p>
       <select id="climate">
         <option value="">Select Your Climate Preference</option>
         <option value="beach">Beach</option>
@@ -56,7 +72,6 @@
       <div id="map" style="width: 100%; height: 400px"></div>
     </div>
 
-    <!-- Link to external JavaScript file for functional logic -->
     <script src="script.js"></script>
   </body>
 </html>

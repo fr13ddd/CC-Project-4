@@ -1,21 +1,30 @@
+@keyframes scrollLeft {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -10000px 0;
+  }
+}
+
 body,
 html {
   font-family: "Ubuntu", sans-serif;
   padding: 0;
   margin: 0;
+  background-image: url("pictures/bgpCC4.jpeg");
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
   background-color: #75e6da;
-}
-
-.container {
-  max-width: 50%;
-  margin: auto;
-  padding: 2%;
-  background-color: #189ab4;
-  box-shadow: 0 0 30px #05445e;
+  animation: scrollLeft 600s linear infinite;
 }
 
 h1 {
   color: #05445e;
+  text-align: center;
 }
 
 select,
@@ -25,8 +34,8 @@ button {
   font-size: 110%;
   display: block;
   width: 100%;
-  padding: 2%;
-  margin-top: 5%;
+  padding: 1.5%;
+  margin-top: 2%;
   color: #05445e;
   background-color: #d4f1f4;
 }
@@ -40,7 +49,23 @@ button {
 
 #weather-info {
   font-family: "Ubuntu", sans-serif;
+  font-size: 110%;
+  margin-top: 5%;
+  color: #05445e;
+}
+
+p {
+  font-family: "Ubuntu", sans-serif;
   font-size: 120%;
   margin-top: 5%;
   color: #05445e;
+}
+
+.container {
+  max-width: 50%;
+  margin: auto;
+  padding: 2%;
+  background-color: rgba(24, 154, 180, 0.95);
+
+  box-shadow: 0 0 30px #05445e;
 }
